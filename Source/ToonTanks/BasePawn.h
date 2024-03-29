@@ -16,26 +16,26 @@ public:
 	// Sets default values for this pawn's properties
 	ABasePawn();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	int32 VisibleAnywhereInt = 12;
+	//UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	//int32 VisibleAnywhereInt = 12;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	int32 EditAnywhereInt = 22;
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	//int32 EditAnywhereInt = 22;
 
-	UPROPERTY(VisibleInstanceOnly)
-	int32 VisibleInstanceOnlyInt = 11;
+	//UPROPERTY(VisibleInstanceOnly)
+	//int32 VisibleInstanceOnlyInt = 11;
 
-	UPROPERTY(VisibleDefaultsOnly)
-	int32 VisibleDefaultsOnlyInt = 5;
+	//UPROPERTY(VisibleDefaultsOnly)
+	//int32 VisibleDefaultsOnlyInt = 5;
 
-	UPROPERTY(EditDefaultsOnly)
-	int32 EditDefaultsOnlyInt = 9;
+	//UPROPERTY(EditDefaultsOnly)
+	//int32 EditDefaultsOnlyInt = 9;
 
-	UPROPERTY(EditInstanceOnly)
-	int32 EditInstanceOnlyInt = 14;
+	//UPROPERTY(EditInstanceOnly)
+	//int32 EditInstanceOnlyInt = 14;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float Speed = 400.f;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	//float Speed = 400.f;
 
 
 protected:
