@@ -18,6 +18,8 @@ ATank::ATank()
 
 }
 
+
+
 // Called to bind functionality to input
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
@@ -26,6 +28,31 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
     PlayerInputComponent->BindAxis(TEXT("Turn"),this,&ATank::Turn);
 
 }
+
+
+void ATank::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+
+    if(PlayerControllerRef){
+        FHitResult HitResult;
+        PlayerControllerRef->GetHitResultUnderCursor(
+            ECollisionChannel::ECC_Visibility, 
+            false,
+            HitResult);
+        
+        RotateTurret(HitResult.ImpactPoint);
+    }
+}
+
+// Called when the game starts or when spawned
+void ATank::BeginPlay()
+{
+	Super::BeginPlay();
+
+	PlayerControllerRef = Cast<APlayerController>(GetController());   
+
+}   
 
 void ATank::Move(float Value)
 {
