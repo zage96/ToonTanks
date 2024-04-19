@@ -38,6 +38,15 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Combat")
 	class UParticleSystemComponent* TrailParticles;
 
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	class USoundBase* LaunchSound;
+	
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	class USoundBase* HitSound;
+
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	TSubclassOf<class UCameraShakeBase> HitCameraShakeClass;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
